@@ -1,7 +1,7 @@
 export function
   muestraJugadores() {
   location.href =
-    "jugadores.html";
+    "smartphones.html";
 }
 
 export function

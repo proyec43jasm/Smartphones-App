@@ -4,7 +4,7 @@ class MiFooter
     this.innerHTML = /* html */
       `<p>
         &copy; 2023
-        Jimenez Palomino Dulce Maria.
+        Solis Morales Jorge Aaron.
       </p>`;
   }
 }

@@ -15,7 +15,7 @@ import {
 
 const daoJugador =
   getFirestore().
-    collection("Jugador");
+    collection("Smartphones");
 const params =
   new URL(location.href).
     searchParams;

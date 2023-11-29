@@ -5,12 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,
        initial-scale=1.0">
-  <title>
-    Jugador Nuevo
-  </title>
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <title>Smartphones</title>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js">
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js">
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js">
+  </script>
   <script src="js/init.js">
   </script>
   <script type="module" src="cmp/mi-nav.js">
@@ -24,48 +25,49 @@
   <form name="forma">
     <mi-nav></mi-nav>
     <header>
-      <h1>Jugador Nuevo</h1>
+      <h1>Alumno</h1>
       <div class="herramientas">
         <a href="jugadores.html">
           Cancelar</a>
-        <button type="submit">
-          Guardar
+        <button>Guardar</button>
+        <button name="eliminar" type="button">
+          Eliminar
         </button>
       </div>
     </header>
     <p>
       <label>
-        Nombre
+        Nombre del smartphone
         <input name="nombre" type="text" required>
       </label>
     </p>
     <p>
       <label>
-        Apellido
+        Fabricante del smartphone
         <input name="apellido" type="text" required>
       </label>
     </p>
     <p>
       <label>
-        Edadl
+        Precio
         <input name="edad" type="text" required>
       </label>
     </p>
     <p>
       <label>
-        Posicion
+        Modelo del smartphone
         <input name="posicion" type="text" required>
       </label>
     </p>
     <p>
       <label>
-        Fecha de contrato
+        Fecha de lanzamiento
         <input name="fecha" type="date" required>
       </label>
     </p>
     <mi-footer></mi-footer>
   </form>
-  <script type="module" src="js/CtrlJugadorNuevo.js">
+  <script type="module" src="js/CtrlJugador.js">
   </script>
 </body>
 
