@@ -1,0 +1,5 @@
+Este archivo tiene como motivo indicar que 
+APP nos sirve para hacer la modulación de los servicios de FIREBASE
+
+Modules son unicamente los archivos que contendran toda las importaciones
+Mientras que APP contendra toda la logica del proyecto
