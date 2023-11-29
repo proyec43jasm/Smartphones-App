@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="style.css">
     <script type="module" src="./main.js"></script>
-    <title>Manualidades UTN</title>
+    <title>Smartphones UTN</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
     <!-- Navbar con tema oscuro -->
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">ORGANIZACIONES UNIVERSALES </a>
+            <a class="navbar-brand" href="#">SMARTPHONES UTN</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -42,12 +42,12 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link botonesConSesion" id="Mostrar-Manualidades"
-                                href="Subir Manualidades.html">SUBIR UNA
-                                ORGANIZACION</a>
+                                href="Subir Smartphones.html">SUBIR UN
+                                SMARTPHONE</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link botonesConSesion" id="Mostrar-Manualidades" href="index.html">VER
-                                ORGANIZACIONES</a>
+                            <a class="nav-link botonesConSesion" id="Mostrar-Smartphones" href="index.html">VER
+                                SMARTPHONES</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link botonesConSesion" id="CerrarSesion">CERRAR SESIÓN</a>
@@ -60,57 +60,56 @@
 
     <!-- Contenido del cuerpo aquí -->
 
-    <!-- Lista de Organizaciones -->
+    <!-- Lista de Smartphones -->
     <div class="container p-4 mt-5">
         <div class="row">
             <div class="col-md-6 offset-md-3 mt-5">
-                <ul class="list-group Organizaciones"></ul>
+                <ul class="list-group Smartphones"></ul>
             </div>
         </div>
     </div>
 
     <!-- MODAL DE ACTUALIZACIÓN -->
-    <div class="modal fade" id="ActualizarOrganizacion" tabindex="-1" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="ActualizarSmartphone" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header bg-dark">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Organización</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Smartphone</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="Formulario-ActualizarOrganizacion">
+                    <form id="Formulario-ActualizarSmartphone">
                         <div class="mb-3">
-                            <label for="Actualizar-Nombre">Nombre de la Organización</label>
+                            <label for="Actualizar-Nombre">Nombre del Smartphone</label>
                             <input type="text" id="Actualizar-Nombre" class="form-control mb-3"
                                 placeholder="Ingresa el nuevo nombre">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-Integrantes">Número de Integrantes</label>
-                            <input type="number" id="Actualizar-Integrantes" class="form-control mb-3"
-                                placeholder="Ingresa el nuevo número de integrantes">
+                            <label for="Actualizar-Fabricante">Fabricante</label>
+                            <input type="text" id="Actualizar-Fabricante" class="form-control mb-3"
+                                placeholder="Ingresa el nuevo fabricante">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-Lider">Líder</label>
-                            <input type="text" id="Actualizar-Lider" class="form-control mb-3"
-                                placeholder="Ingresa el nuevo líder">
+                            <label for="Actualizar-Precio">Precio</label>
+                            <input type="number" id="Actualizar-Precio" class="form-control mb-3"
+                                placeholder="Ingresa el nuevo precio">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-NumeroAliados">Número de Aliados</label>
-                            <input type="number" id="Actualizar-NumeroAliados" class="form-control mb-3"
-                                placeholder="Ingresa el nuevo número de aliados">
+                            <label for="Actualizar-FechaLanzamiento">Fecha de Lanzamiento</label>
+                            <input type="date" id="Actualizar-FechaLanzamiento" class="form-control mb-3">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-FechaContratacion">Fecha de Contratación</label>
-                            <input type="date" id="Actualizar-FechaContratacion" class="form-control mb-3">
+                            <label for="Actualizar-CaracteristicasTecnicas">Características Técnicas</label>
+                            <textarea id="Actualizar-CaracteristicasTecnicas" class="form-control mb-3"
+                                placeholder="Ingresa las nuevas características técnicas"></textarea>
                         </div>
-                        <button class="btn btn-primary w-100 mb-2 edit Boton-ActualizarOrganizacion">Actualizar</button>
+                        <button class="btn btn-primary w-100 mb-2 edit Boton-ActualizarSmartphone">Actualizar</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- MODAL DE INICIO DE SESION -->
     <div class="modal fade" id="InicioSesion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -122,14 +121,10 @@
                 </div>
                 <div class="modal-body">
                     <form id="Formulario-InicioSesion">
-                        <label for="email">
-                            Correo:
-                        </label>
+                        <label for="InicioSesion-Email">Correo:</label>
                         <input type="text" id="InicioSesion-Email" class="form-control mb-3"
                             placeholder="Ingresa tu correo" required>
-                        <label for="password">
-                            Contraseña:
-                        </label>
+                        <label for="InicioSesion-Password">Contraseña:</label>
                         <input type="password" id="InicioSesion-Password" class="form-control mb-3"
                             placeholder="Ingresa tu contraseña" required>
                         <button type="submit" class="btn btn-outline-light w-100 mb-2">INICIAR SESIÓN</button>
@@ -153,14 +148,10 @@
                 </div>
                 <div class="modal-body">
                     <form id="Formulario-Registro">
-                        <label for="email">
-                            Correo:
-                        </label>
+                        <label for="Registrarse-Email">Correo:</label>
                         <input type="text" id="Registrarse-Email" class="form-control mb-3"
                             placeholder="Ingresa tu correo" required>
-                        <label for="password">
-                            Contraseña:
-                        </label>
+                        <label for="Registrarse-Password">Contraseña:</label>
                         <input type="password" id="Registrarse-Password" class="form-control mb-3"
                             placeholder="Ingresa tu contraseña" required>
                         <button type="submit" class="btn btn-outline-light w-100 mb-4">REGISTRARSE</button>

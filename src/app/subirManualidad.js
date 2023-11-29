@@ -2,35 +2,35 @@ import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.6.0/fi
 import { db } from "./firebase.js";
 
 window.addEventListener('DOMContentLoaded', () => {
-    const formularioOrganizacion = document.querySelector('#Formulario-Organizacion');
+    const formularioSmartphone = document.querySelector('#Formulario-Smartphone');
 
-    formularioOrganizacion.addEventListener('submit', async (e) => {
+    formularioSmartphone.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const NOMBRE = formularioOrganizacion['Nombre-Organizacion'].value;
-        const INTEGRANTES = parseInt(formularioOrganizacion['Integrantes-Organizacion'].value);
-        const LIDER = formularioOrganizacion['Lider-Organizacion'].value;
-        const NUMERO_ALIADOS = parseInt(formularioOrganizacion['NumeroAliados-Organizacion'].value);
-        const FECHA_CONTRATACION = formularioOrganizacion['Fecha-Contratacion-Organizacion'].value;
+        const NOMBRE = formularioSmartphone['Nombre-Smartphone'].value;
+        const FABRICANTE = formularioSmartphone['Fabricante-Smartphone'].value;
+        const PRECIO = parseFloat(formularioSmartphone['Precio-Smartphone'].value);
+        const FECHA_LANZAMIENTO = formularioSmartphone['Fecha-Lanzamiento-Smartphone'].value;
+        const CARACTERISTICAS_TECNICAS = formularioSmartphone['CaracteristicasTecnicas-Smartphone'].value;
 
         try {
             // Utiliza addDoc para agregar un documento con un identificador generado automáticamente
-            const nuevaOrganizacionRef = await addDoc(collection(db, 'Organizaciones'), {
+            const nuevoSmartphoneRef = await addDoc(collection(db, 'Smartphones'), {
                 Nombre: NOMBRE,
-                Integrantes: INTEGRANTES,
-                Lider: LIDER,
-                NumeroAliados: NUMERO_ALIADOS,
-                FechaContratacion: FECHA_CONTRATACION
+                Fabricante: FABRICANTE,
+                Precio: PRECIO,
+                FechaLanzamiento: FECHA_LANZAMIENTO,
+                CaracteristicasTecnicas: CARACTERISTICAS_TECNICAS
             });
 
             // Muestra un mensaje si todo sale bien
-            alert(`La organización ${NOMBRE} ha sido registrada exitosamente`);
+            alert(`El smartphone ${NOMBRE} ha sido registrado exitosamente`);
 
             // Limpia el formulario
-            formularioOrganizacion.reset();
+            formularioSmartphone.reset();
         } catch (error) {
             // Maneja el error y muestra un mensaje con el error
-            alert('Error al registrar la organización:', 'noValido');
+            alert('Error al registrar el smartphone:', 'noValido');
         }
     });
 });

@@ -1,6 +1,6 @@
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
 import { getDocs, collection } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
-import { MostrarListaOrganizaciones } from "./app/CRUDMaestros.js";
+import { MostrarListaSmartphones } from "./app/CRUDMaestros.js";
 import { revisaSesion } from "./app/revisaSesion.js";
 import { auth, db } from "./app/firebase.js";
 import './app/iniciaSesionEmailAndPass.js'
@@ -12,10 +12,10 @@ import './app/cierreSesion.js'
 onAuthStateChanged(auth, async (usuario) => {
     if (usuario) {
         // Si el usuario está en el index, muestra la lista de manualidades
-        const querySnapshot = await getDocs(collection(db, 'Organizaciones'))
-        MostrarListaOrganizaciones(querySnapshot.docs);
+        const querySnapshot = await getDocs(collection(db, 'Smartphones'))
+        MostrarListaSmartphones(querySnapshot.docs);
     } else {
-        MostrarListaOrganizaciones([]);  // Puedes ajustar esto según tu lógica
+        MostrarListaSmartphones([]);  // Puedes ajustar esto según tu lógica
     }
     revisaSesion(usuario);
 });
